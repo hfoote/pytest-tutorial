@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>61.0"]
+build_backend = "setuptools.build_meta"
+
+[project]
+name = "sine"
+authors = [
+  { name="Hayden R. Foote", email="haydenfoote@arizona.edu" },
+]
+description = "My tutorial for python testing for the TIMESTEP Astronomical Software Engineering Internship"
+requires-python = ">=3.11"
+dynamic = ["version"]
+dependencies = [
+	"numpy >= 1.20",
+	"matplotlib >= 3.9.2",
+	"pytest >= 7.4",
+	"pytest-mock",
+	"pytest-cov",
+	"jupyter",
+]
+
+[tool.pytest.ini_options]
+addopts = [
+	"--import-mode=importlib",
+]

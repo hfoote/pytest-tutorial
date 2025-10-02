@@ -1,1 +1,6 @@
 .DS_Store
+.pytest_cache
+.vscode
+.coverage
+__pycache__
+sine.egg-info
