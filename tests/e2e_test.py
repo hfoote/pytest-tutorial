@@ -21,7 +21,7 @@ def test_sin_class_functionality(mocker):
 	assert np.abs(sine(0)) < TOL
 
 	# Next, they extract the period of the sin curve,
-	per = sine.get_period()
+	per = sine.period
 
 	# and check that the function has the same value after one period
 	assert np.abs(sine(per)) < TOL 
@@ -29,7 +29,7 @@ def test_sin_class_functionality(mocker):
 	assert np.abs(sine(per/2.)) < TOL 
 
 	# finally, they plot the curve over two periods,  
-	sin_plot = sine.plot(domain=[0, 2.*sine.get_period()])
+	sin_plot = sine.plot(domain=[0, 2.*sine.period])
 	
 	# and notice that they have been given the matplotlib Line2D object to modify if they choose. 
 	assert isinstance(sin_plot[0], matplotlib.lines.Line2D)
